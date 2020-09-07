@@ -14,19 +14,19 @@
 			setTabBarText() {
 				uni.setTabBarItem({
 					index: 0,
-					text: this.$t('ToDo')
+					text: '首页'
 				})
 				uni.setTabBarItem({
 					index: 1,
-					text: this.$t('Project')
+					text: '办事'
 				})
 				uni.setTabBarItem({
 					index: 2,
-					text: this.$t('Statistics')
+					text: '发布'
 				})
 				uni.setTabBarItem({
 					index: 3,
-					text: this.$t('Profile')
+					text: '企业应用'
 				})
 			},
 			/**
