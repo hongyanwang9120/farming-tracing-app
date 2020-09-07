@@ -11,7 +11,7 @@
 			<view class="center-list">
 				<view class="center-list-item border-bottom">
 					<text class="list-icon">&#xe60f;</text>
-					<text class="list-text">帐号管理</text>
+					<text class="list-text">帐号管理2</text>
 					<text class="navigat-arrow">&#xe65e;</text>
 				</view>
 				<!-- #ifdef APP-PLUS -->
