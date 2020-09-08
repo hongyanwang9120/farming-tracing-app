@@ -1,6 +1,4 @@
-## 基于uni-app多平台管理系统模板uniapp-admin
 
-## uniapp-admin 2.0.0 重磅发布！
 
 * 更加完善的开发指南
 * 主题定制：支持颜色主题和深色模式，页面更加美观
@@ -16,16 +14,6 @@
 > 提示：Android二维码使用手机浏览器扫<br>
 > 用户名：admin 密码：admin
 
-<img src="http://silianpan.cn/wp-content/uploads/2020/08/wp_editor_md_5130d93e34fca6703f465b8d173cd042.jpg" width="120" alt="h5"/>
-<img src="http://silianpan.cn/wp-content/uploads/2020/08/wp_editor_md_5e73998d5012227676299f651d760cf2.jpg" width="120" alt="android"/>
-
-### 代码地址
-
-[Github](https://github.com/silianpan/uniapp-admin)
-
-[Gitee](https://gitee.com/twofloor/uniapp-admin)
-
-<img src="http://silianpan.cn/wp-content/uploads/2020/08/ua.gif" alt="ua-gif"/>
 
 ### 一、前言
 
@@ -44,7 +32,7 @@
   * API调用方案
   * 消息推送方案，另见文章[《uni-app消息推送方案》](https://github.com/silianpan/uniapp-admin/blob/master/PUSH_MESSAGE.md)
 
-&emsp;&emsp;如果有欠缺的地方，或者有更好的想法，大家可以**多多交流**，文章最后可以加我。
+
 
 ### 二、开发环境和生产环境跨域方案
 
@@ -294,10 +282,3 @@ request(options = {}) {
 ### 八、效果
 
 #### 开源不易，且用且珍惜
-
-#### 赞助作者
-
-<img src="http://silianpan.cn/wp-content/uploads/2019/10/b9c369443b192642f975be9020b3234e.png" width="120"/>
-<img src="http://silianpan.cn/wp-content/themes/yusi1.0/img/weixin.gif" width="120" />
-
-转载请注明：[溜爸 » 基于uni-app多平台管理系统模板uniapp-admin](http://silianpan.cn/index.php/2019/10/26/uniapp_admin/)
