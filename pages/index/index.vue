@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<uni-nav-bar :fixed="true" color="#333333" :background-color="themeBgColor" :border="false">
+		<!-- <uni-nav-bar :fixed="true" color="#333333" :background-color="themeBgColor" :border="false">
 			<view class="input-view">
 				<uni-icons type="search" size="22" color="#666666" />
 				<input v-model="searchVal" confirm-type="search" class="input" type="text" placeholder="搜索项目/机构" @confirm="search">
@@ -18,8 +18,8 @@
 					<view class="tui-tabs-slider" :style="{transform:'translateX('+scrollLeft+'px)',width:'68rpx',height:'6rpx',bottom:'0rpx',background:'#ffffb8'}"></view>
 				</view>
 			</scroll-view>
-		</uni-nav-bar>
-		<swiper :class="darkMode?'custom-dark':'custom-light'" class="tab-content" :current="currentTab" duration="300" @change="switchTab" :style="{height:winHeight+'px'}">
+		</uni-nav-bar> -->
+		<!-- <swiper :class="darkMode?'custom-dark':'custom-light'" class="tab-content" :current="currentTab" duration="300" @change="switchTab" :style="{height:winHeight+'px'}">
 			<swiper-item>
 				<scroll-view scroll-y class="scoll-y">
 					<audit-project ref="auditProjectRef"></audit-project>
@@ -30,7 +30,7 @@
 					<audit-user ref="auditUserRef"></audit-user>
 				</scroll-view>
 			</swiper-item>
-		</swiper>
+		</swiper> -->
 	</view>
 </template>
 
@@ -68,11 +68,11 @@
 			}
 		},
 		onReady() {
-			uni.setNavigationBarTitle({
-			    title: this.$t('ToDo')
-			})
-			this.setNavBarColor()
-			this.setDarkMode()
+			// uni.setNavigationBarTitle({
+			//     title: this.$t('ToDo')
+			// })
+			// this.setNavBarColor()
+			// this.setDarkMode()
 		},
 		watch: {
 			themeBgColor() {
@@ -84,24 +84,24 @@
 		},
 		onLoad() {
 			//  高度自适应
-			uni.getSystemInfo({
-				success: res => {
-					this.winHeight = res.windowHeight
-					this.winWidth = res.windowWidth
-					this.checkCor()
-				}
-			})
+			// uni.getSystemInfo({
+			// 	success: res => {
+			// 		this.winHeight = res.windowHeight
+			// 		this.winWidth = res.windowWidth
+			// 		this.checkCor()
+			// 	}
+			// })
 		},
 		onShow(e) {
 			// setNavBar
-			this.setNavBarColor()
-			// pages
-			let pages = getCurrentPages()
-			let currPage = pages[pages.length - 1]
-			if (currPage.isDoRefresh === true) {
-				currPage.isDoRefresh = false
-				this.search()
-			}
+			// this.setNavBarColor()
+			// // pages
+			// let pages = getCurrentPages()
+			// let currPage = pages[pages.length - 1]
+			// if (currPage.isDoRefresh === true) {
+			// 	currPage.isDoRefresh = false
+			// 	this.search()
+			// }
 		},
 		methods: {
 			setDarkMode() {
