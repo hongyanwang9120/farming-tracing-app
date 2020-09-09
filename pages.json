@@ -4,12 +4,38 @@
 			"path": "pages/index/index",
 			"style": {
 				"enablePullDownRefresh": false, // 不开启下拉刷新, 默认就是false
-				"navigationBarTitleText": "Thor UI",
-                // "titleNView": false,
+				// "navigationBarTitleText": "农产品区块链溯源平台",
 				"app-plus": {
+                    "titleNView":false,
 					"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-				}
+                    // "titleNView": {
+                    //     "autoBackButton":"false",
+                    //     "buttons": [ 
+                    //         {
+                    //             "text": "☰", 
+                    //             "fontSize":"20",
+                    //             "float": "left",
+                    //             "color":"#fff"
+                    //         },
+                    //         {
+                    //             "text": "扫一扫", 
+                    //             "fontSize":"16",
+                    //             "float": "right",
+                    //             "color":"#fff"
+                    //         }
+                    //     ]
+                    // }
+                }
 			}
+		},
+        {
+			"path": "pages/enterprise/enterprise",
+			"style": {
+				"navigationBarTitleText": "企业榜"
+			}
+		},
+        {
+			"path": "pages/enterprise/detailsInfo"
 		},
 		{
 			"path": "pages/login/login",
@@ -17,15 +43,7 @@
 				"titleNView": false
 			}
 		},
-		{
-			"path": "pages/index/project/detail-project"
-		},
-		{
-			"path": "pages/index/project/adjust-project"
-		},
-		{
-			"path": "pages/index/user/detail-user"
-		},
+		 
 		{
 			"path": "pages/file/file-preview"
 		},
@@ -45,6 +63,12 @@
 			"path": "pages/user/setting"
 		}
 	],
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "tui-(.*)": "./components/thorui/tui-$1/tui-$1.vue"
+        }
+    },
 	"tabBar": {
 		"color": "#8a8a8a",
 		"selectedColor": "#4364F7",
