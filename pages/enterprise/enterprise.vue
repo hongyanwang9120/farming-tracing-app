@@ -32,7 +32,6 @@
 		},
         methods:{
             linkTo(){
-                console.log(343)
                 uni.navigateTo({
                     url: 'detailsInfo'
                 });

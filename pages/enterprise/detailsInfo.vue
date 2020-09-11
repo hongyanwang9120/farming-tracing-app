@@ -15,11 +15,11 @@
             <video-list />
         </title-box>
         <title-box title="企业经营位置">
-            <map class="margin-top-sm" style="width: 100%; height: 300px;" 
+            <map class="margin-top-sm" style="width: 100%; height: 600rpx;" 
                 :latitude="latitude"
                 :longitude="longitude" 
-                :markers="covers" />
-            <!-- <view id="wrapper" style="width: 500px; height: 500px;"></view> -->
+                show-location="true"
+                :markers="markers" />
         </title-box>                   
     </view>
 </template>
@@ -30,40 +30,23 @@
     import amap from '../../common/AMapWX_SDK/amap-wx.js';
 	export default {
         components:{ titleBox, productInfo, videoList },
-        onReady(){
+        onLoad(){
             uni.setNavigationBarTitle({
                 title: '湖南省云上茶叶有限公司'
             })
             let amapPluginInstance = new amap.AMapWX({	
                 key: 'cd6b99d17278e156a69d3dec3760d1c3'  //该key 是在高德中申请的微信小程序key
             });
-            console.log(amapPluginInstance)
-            amapPluginInstance.getPoiAround({
-                success: function(data){
-                    //成功回调
-                    console.log('00',data)
-                },
-                fail: function(info){
-                    //失败回调
-                    console.log('11',info)
-                }
-            })
         },
 		data() {
 			return {
 				contentTmp:'湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司湖南省云上茶叶有限公司',
-                id:0, // 使用 marker点击事件 需要填写id
-                title: 'map',
-                latitude: 39.909,
-                longitude: 116.39742,
-                covers: [{
-                    latitude: 39.909,
-                    longitude: 116.39742,
-                    iconPath: '../../../static/location.png'
-                }, {
-                    latitude: 39.90,
-                    longitude: 116.39,
-                    iconPath: '../../../static/location.png'
+                latitude: 40.044419,
+                longitude: 116.285102,
+                markers: [{
+                    latitude: 40.0444199,
+                    longitude: 116.285102,
+                    iconPath: '../../static/images/index/map.png'
                 }]
 			};
 		}

@@ -7,24 +7,7 @@
 				// "navigationBarTitleText": "农产品区块链溯源平台",
 				"app-plus": {
                     "titleNView":false,
-					"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-                    // "titleNView": {
-                    //     "autoBackButton":"false",
-                    //     "buttons": [ 
-                    //         {
-                    //             "text": "☰", 
-                    //             "fontSize":"20",
-                    //             "float": "left",
-                    //             "color":"#fff"
-                    //         },
-                    //         {
-                    //             "text": "扫一扫", 
-                    //             "fontSize":"16",
-                    //             "float": "right",
-                    //             "color":"#fff"
-                    //         }
-                    //     ]
-                    // }
+					"bounce": "none" 
                 }
 			}
 		},
@@ -34,6 +17,33 @@
 				"navigationBarTitleText": "企业榜"
 			}
 		},
+        {
+        	"path": "pages/base/base",
+        	"style": {
+        		"navigationBarTitleText": "地块一览",
+                "app-plus": {
+                	"bounce": "none", // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
+                    "titleNView": {
+
+                    }
+                }
+        	}
+        },
+        {
+        	"path": "pages/base/baseMap",
+        	"style": {
+        		"navigationBarTitleText": "地块一览",
+                "app-plus": {
+                	"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
+                }
+        	}
+        },
+        {
+        	"path": "pages/base/baseDetails",
+        	"style": {
+        		"navigationBarTitleText": "地块详情"
+        	}
+        },
 		{
 			"path": "pages/login/loginPwd",
 			"style": {
@@ -81,12 +91,6 @@
 				}
 			}
 		},
-		{
-			"path": "pages/index/project/detail-project"
-		},
-		{
-			"path": "pages/index/project/adjust-project"
-		},
         {
 			"path": "pages/enterprise/detailsInfo"
 		},
@@ -95,8 +99,7 @@
 			"style": {
 				"titleNView": false
 			}
-		},
-		 
+		},	 
 		{
 			"path": "pages/file/file-preview"
 		},
@@ -117,11 +120,11 @@
 		}
 	],
     "easycom": {
-        "autoscan": true,
-        "custom": {
-            "tui-(.*)": "./components/thorui/tui-$1/tui-$1.vue"
-        }
-    },
+    		"autoscan": true,
+    		"custom": {
+    			"tui-(.*)": "@/components/thorui/tui-$1/tui-$1.vue"
+    		}
+    	},
 	"tabBar": {
 		"color": "#8a8a8a",
 		"selectedColor": "#4364F7",
