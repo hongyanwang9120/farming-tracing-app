@@ -75,7 +75,7 @@
 			listTheme() {
 				return [
 					{ text: this.$t('Dark'), color: '#161a23' },
-					{ text: this.$t('Indigo'), color: '#27547d' },
+					{ text: this.$t('Indigo'), color: '#0081FF' },
 					{ text: this.$t('IndigoBlue'), color: '#177cb0' },
 					{ text: this.$t('Volcano'), color: '#fa541c' },
 					{ text: this.$t('BluishGreen'), color: '#48c0a3' },

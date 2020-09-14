@@ -1,5 +1,6 @@
 <template>
-	<view :class="darkMode?'custom-dark':'custom-light'" class="w-h-100">
+	<view  class="w-h-100">
+		<apphead></apphead>
 		<view class="cu-bar solid-bottom">
 			<view class="action">
 				<text class="cuIcon-title text-blue"></text>{{$t('BasicInfo')}}
@@ -60,9 +61,11 @@
 	import { mapGetters } from 'vuex'
 	import uniPopup from '@/components/uni-popup/uni-popup.vue'
 	import md5 from '@/common/lib/md5.min.js'
+	import apphead from '@/pages/common/apphead'
 	export default {
 		components: {
-			uniPopup
+			uniPopup,
+			apphead
 		},
 		computed: {
 			...mapGetters(['user', 'themeBgColor', 'darkMode'])
@@ -80,13 +83,10 @@
 			}
 		},
 		onShow() {
-			this.initTheme()
 		},
 		onReady() {
-			uni.setNavigationBarTitle({
-			    title: this.$t('Profile')
-			})
-			this.initTheme()
+		
+
 		},
 		onLoad() {
 			//#ifdef APP-PLUS
@@ -97,28 +97,8 @@
 			//#endif
 		},
 		methods: {
-			initTheme() {
-				this.setNavBarColor()
-				this.setDarkMode()
-			},
-			setDarkMode() {
-				this.darkMode ? uni.setTabBarStyle({
-				  backgroundColor: '#2a2b2d'
-				}) : uni.setTabBarStyle({
-					backgroundColor: '#ffffff'
-				})
-			},
-			setNavBarColor() {
-				// navBar-bg-color
-				uni.setNavigationBarColor({
-				    frontColor: '#ffffff',
-				    backgroundColor: this.themeBgColor,
-				    animation: {
-				        duration: 400,
-				        timingFunc: 'easeIn'
-				    }
-				})
-			},
+			
+			
 			okClick() {
 				const params = {
 					id: this.user.id,
