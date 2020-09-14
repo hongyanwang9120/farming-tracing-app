@@ -37,7 +37,7 @@
                     </view>
                     <text class="text-sm">我的任务</text>
                 </view>
-                <view class="padding-sm">
+                <view class="padding-sm" @click="linkTo('基地查看')">
                     <view>
                         <text class="cuIcon-global text-yellow"></text>
                     </view>
@@ -95,7 +95,7 @@
     export default {
         components: { uniNavBar, leftMenu },
         onReady() {
-           
+
         },
         onLoad() {
              
@@ -113,12 +113,15 @@
             ...mapGetters(['themeBgColor', 'darkMode'])
         },
         methods: {
-            linkTo(){
-                uni.navigateTo({
-                    url: '../../pages/enterprise/enterprise'
-                });
+            linkTo(type){
+                let strUrl = '';
+                if(type == '基地查看'){
+                    strUrl = '../../pages/base/base'
+                }else if(type == '企业排行'){
+                    strUrl = '../../pages/enterprise/enterprise'
+                }
+                uni.navigateTo({ url: strUrl });
             }
-
         }
     }
 </script>

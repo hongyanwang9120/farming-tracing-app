@@ -1,30 +1,12 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ 
 		{
 			"path": "pages/index/index",
 			"style": {
-				"enablePullDownRefresh": false, // 不开启下拉刷新, 默认就是false
-				// "navigationBarTitleText": "农产品区块链溯源平台",
+				"enablePullDownRefresh": false, 
 				"app-plus": {
                     "titleNView":false,
-					"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-                    // "titleNView": {
-                    //     "autoBackButton":"false",
-                    //     "buttons": [ 
-                    //         {
-                    //             "text": "☰", 
-                    //             "fontSize":"20",
-                    //             "float": "left",
-                    //             "color":"#fff"
-                    //         },
-                    //         {
-                    //             "text": "扫一扫", 
-                    //             "fontSize":"16",
-                    //             "float": "right",
-                    //             "color":"#fff"
-                    //         }
-                    //     ]
-                    // }
+					"bounce": "none" 
                 }
 			}
 		},
@@ -39,20 +21,7 @@
         	"style": {
         		"navigationBarTitleText": "地块一览",
                 "app-plus": {
-                    "titleNView":false,
-                	"bounce": "none", // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-                    "titleNView": {
-                        // "autoBackButton":"false",
-                        // "buttons": [ 
-                        //     {
-                        //         "text": "地图模式", 
-                        //         "fontSize":"12",
-                        //         "float": "right",
-                        //         "color":"#fff",
-                        //         "width":"130rpx"
-                        //     }
-                        // ]
-                    }
+                	"bounce": "none"
                 }
         	}
         },
@@ -61,7 +30,7 @@
         	"style": {
         		"navigationBarTitleText": "地块一览",
                 "app-plus": {
-                	"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
+                	"bounce": "none" 
                 }
         	}
         },
