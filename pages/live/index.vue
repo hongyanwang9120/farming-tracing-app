@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<apphead></apphead>
 		<uni-nav-bar :fixed="true" color="#333333" :background-color="themeBgColor" :border="false">
 			<view class="input-view">
 				<uni-icons type="search" size="22" color="#666666" />
@@ -21,12 +22,14 @@
 	import { mapGetters } from 'vuex'
 	import uniIcons from '@/components/uni-icons/uni-icons.vue'
 	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
-	import projectList from '@/pages/project/project-list.vue'
+	import projectList from '@/pages/live/project-list.vue'
+	import apphead from '@/pages/common/apphead'
 	export default {
 		components: {
 			uniIcons,
 			uniNavBar,
-			projectList
+			projectList,
+			apphead
 		},
 		computed: {
 			...mapGetters(['themeBgColor', 'darkMode']),
@@ -39,13 +42,13 @@
 			}
 		},
 		onReady() {
-			uni.setNavigationBarTitle({
-			    title: this.$t('Project')
-			})
-			this.setNavBarColor()
+			// uni.setNavigationBarTitle({
+			//     title: this.$t('企业直播')
+			// })
+			// this.setNavBarColor()
 		},
 		onShow() {
-			this.setNavBarColor()
+		
 		},
 		onLoad() {
 			//  高度自适应
@@ -56,17 +59,7 @@
 			})
 		},
 		methods: {
-			setNavBarColor() {
-				// navBar-bg-color
-				uni.setNavigationBarColor({
-				    frontColor: '#ffffff',
-				    backgroundColor: this.themeBgColor,
-				    animation: {
-				        duration: 400,
-				        timingFunc: 'easeIn'
-				    }
-				})
-			},
+		
 			search() {
 				this.$refs.projectListRef.queryByName(this.searchVal)
 			},

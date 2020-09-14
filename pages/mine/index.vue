@@ -1,5 +1,7 @@
 <template>
+		
 	<view :class="darkMode?'custom-dark':'custom-light'">
+		<apphead></apphead>
 		<view class="analysis padding-xs flex align-center">
 			<view class="flex-sub text-center">
 				<view class="solid-bottom text-xxl padding">
@@ -21,12 +23,14 @@
 
 <script>
 	import { mapGetters } from 'vuex'
-	import ProjectTimeTable from '@/pages/analysis/time-table.vue'
-	import UchartsDemo from '@/pages/analysis/ucharts-demo.vue'
+	import ProjectTimeTable from '@/pages/mine/time-table.vue'
+	import UchartsDemo from '@/pages/mine/ucharts-demo.vue'
+	import apphead from '@/pages/common/apphead'
 	export default {
 		components: {
 			ProjectTimeTable,
-			UchartsDemo
+			UchartsDemo,
+			apphead
 		},
 		computed: {
 			...mapGetters(['themeBgColor', 'darkMode']),
@@ -38,26 +42,13 @@
 			}
 		},
 		onReady() {
-			uni.setNavigationBarTitle({
-			    title: this.$t('Statistics')
-			})
-			this.setNavBarColor()
+		
 		},
 		onShow() {
-			this.setNavBarColor()
+			
 		},
 		methods: {
-			setNavBarColor() {
-				// navBar-bg-color
-				uni.setNavigationBarColor({
-				    frontColor: '#ffffff',
-				    backgroundColor: this.themeBgColor,
-				    animation: {
-				        duration: 400,
-				        timingFunc: 'easeIn'
-				    }
-				})
-			}
+			
 		}
 	}
 </script>

@@ -9,7 +9,7 @@ export default {
 		themeBgColor: state => {
 			const color = Vue.prototype.$cache.get('_themeBgColor')
 			if (_.isEmpty(color) && _.isEmpty(state.themeBgColor)) {
-				return '#27547d'
+				return '#0081FF'
 			}
 			return !_.isEmpty(state.themeBgColor) ? state.themeBgColor : color
 		},

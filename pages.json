@@ -3,43 +3,62 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"enablePullDownRefresh": false, // 不开启下拉刷新, 默认就是false
-				// "navigationBarTitleText": "农产品区块链溯源平台",
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "农产品区块链溯源平台",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
 				"app-plus": {
-                    "titleNView":false,
-					"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-                    // "titleNView": {
-                    //     "autoBackButton":"false",
-                    //     "buttons": [ 
-                    //         {
-                    //             "text": "☰", 
-                    //             "fontSize":"20",
-                    //             "float": "left",
-                    //             "color":"#fff"
-                    //         },
-                    //         {
-                    //             "text": "扫一扫", 
-                    //             "fontSize":"16",
-                    //             "float": "right",
-                    //             "color":"#fff"
-                    //         }
-                    //     ]
-                    // }
-                }
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue607",
+							"fontSrc": "/static/iconfont.ttf",
+							"fontSize": "20px",
+							"color": "white"
+						}]
+					}
+				}
 			}
 		},
-        {
+		// 企业排行
+		{
 			"path": "pages/enterprise/enterprise",
 			"style": {
-				"navigationBarTitleText": "企业榜"
+							"navigationBarBackgroundColor": "#0081FF",
+							"navigationBarTitleText": "农产品区块链溯源平台",
+							"enablePullDownRefresh": true,
+							"onReachBottomDistance": 50,
+							"app-plus": {
+								"bounce": "vertical",
+								"titleNView": {
+									"buttons": [{
+										"text": "\ue607",
+										"fontSrc": "/static/iconfont.ttf",
+										"fontSize": "20px",
+										"color": "white"
+									}]
+								}
+							}
+						}
+		},
+		{
+			"path": "pages/enterprise/detailsInfo"
+		},
+		// 验证码登陆
+		{
+			"path": "pages/login/login",
+			"style": {
+				"titleNView": false
 			}
 		},
+		// 密码登陆
 		{
 			"path": "pages/login/loginPwd",
 			"style": {
 				"titleNView": false
 			}
 		},
+		// 忘记密码
 		{
 			"path": "pages/login/forgetPwd",
 
@@ -53,6 +72,7 @@
 				}
 			}
 		},
+		// 重置密码
 		{
 			"path": "pages/login/resetPwd",
 
@@ -67,12 +87,12 @@
 				}
 			}
 		},
+		// 用户协议
 		{
 			"path": "pages/login/userTerms",
 
 			"style": {
 				"navigationBarBackgroundColor": "#0081FF",
-
 				"navigationBarTitleText": "用户协议及隐私条款",
 				"enablePullDownRefresh": true,
 				"onReachBottomDistance": 50,
@@ -81,68 +101,127 @@
 				}
 			}
 		},
+
+		// 任务管理
 		{
-			"path": "pages/index/project/detail-project"
-		},
-		{
-			"path": "pages/index/project/adjust-project"
-		},
-        {
-			"path": "pages/enterprise/detailsInfo"
-		},
-		{
-			"path": "pages/login/login",
+			"path": "pages/task/task",
 			"style": {
-				"titleNView": false
+				"navigationBarBackgroundColor": "#0081FF",
+
+				"navigationBarTitleText": "任务管理",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical"
+				}
 			}
 		},
-		 
+		
+
+
+		// 企业直播
 		{
-			"path": "pages/file/file-preview"
+			"path": "pages/live/index",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "农产品区块链溯源平台",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue607",
+							"fontSrc": "/static/iconfont.ttf",
+							"fontSize": "20px",
+							"color": "white"
+						}]
+					}
+				}
+			}
 		},
 		{
-			"path": "pages/project/index"
+			"path": "pages/live/project-detail"
 		},
 		{
-			"path": "pages/project/project-detail"
+			"path": "pages/mine/index",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "农产品区块链溯源平台",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue607",
+							"fontSrc": "/static/iconfont.ttf",
+							"fontSize": "20px",
+							"color": "white"
+						}]
+					}
+				}
+			}
 		},
 		{
-			"path": "pages/analysis/index"
+			"path": "pages/equipment/index",
+			"style": {
+							"navigationBarBackgroundColor": "#0081FF",
+							"navigationBarTitleText": "农产品区块链溯源平台",
+							"enablePullDownRefresh": true,
+							"onReachBottomDistance": 50,
+							"app-plus": {
+								"bounce": "vertical",
+								"titleNView": {
+									"buttons": [{
+										"text": "\ue607",
+										"fontSrc": "/static/iconfont.ttf",
+										"fontSize": "20px",
+										"color": "white"
+									}]
+								}
+							}
+						}
 		},
 		{
-			"path": "pages/user/index"
-		},
-		{
-			"path": "pages/user/setting"
+			"path": "pages/equipment/setting"
 		}
 	],
-    "easycom": {
-        "autoscan": true,
-        "custom": {
-            "tui-(.*)": "./components/thorui/tui-$1/tui-$1.vue"
-        }
-    },
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"tui-(.*)": "@/components/thorui/tui-$1/tui-$1.vue"
+		}
+	},
 	"tabBar": {
 		"color": "#8a8a8a",
 		"selectedColor": "#4364F7",
 		"backgroundColor": "#ffffff",
 		"list": [{
-			"pagePath": "pages/index/index",
-			"iconPath": "static/img/tabbar/home.png",
-			"selectedIconPath": "static/img/tabbar/homeHL.png"
-		}, {
-			"pagePath": "pages/project/index",
-			"iconPath": "static/img/tabbar/project.png",
-			"selectedIconPath": "static/img/tabbar/projectHL.png"
-		}, {
-			"pagePath": "pages/analysis/index",
-			"iconPath": "static/img/tabbar/tongji.png",
-			"selectedIconPath": "static/img/tabbar/tongjiHL.png"
-		}, {
-			"pagePath": "pages/user/index",
-			"iconPath": "static/img/tabbar/user.png",
-			"selectedIconPath": "static/img/tabbar/userHL.png"
-		}]
+				"pagePath": "pages/index/index",
+				"iconPath": "static/img/tabbar/todo.png",
+				"selectedIconPath": "static/img/tabbar/todoHL.png"
+			}, {
+				"pagePath": "pages/live/index",
+				"iconPath": "static/img/tabbar/project.png",
+				"selectedIconPath": "static/img/tabbar/projectHL.png"
+			}, {
+				"pagePath": "pages/mine/index",
+				"iconPath": "static/img/tabbar/user.png",
+				"selectedIconPath": "static/img/tabbar/userHL.png"
+			}, {
+				"pagePath": "pages/equipment/index",
+				"iconPath": "static/img/tabbar/org.png",
+				"selectedIconPath": "static/img/tabbar/orgHL.png"
+			},
+			{
+				"pagePath": "pages/enterprise/enterprise",
+				"iconPath": "static/img/tabbar/tongji.png",
+				"selectedIconPath": "static/img/tabbar/tongjiHL.png"
+			}
+
+
+		]
 	},
 	"globalStyle": {
 		// "navigationBarTextStyle": "white",

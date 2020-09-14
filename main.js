@@ -6,6 +6,7 @@ import _ from 'lodash'
 import MinRequest from './utils//MinRequest'
 import minApi from './api/api'
 import MinCache from './utils/MinCache'
+import tui from './common/httpRequest'
 // import minRouter from './router/router.js'
 
 // import cuCustom from './colorui/components/cu-custom.vue'
@@ -19,10 +20,11 @@ Vue.use(MinCache)
 // 注册路由
 // Vue.use(MinRouter)
 
-App.mpType = 'app'
+
+Vue.prototype.tui = tui
 Vue.prototype._i18n = i18n
 Vue.prototype.$_ = _
-
+App.mpType = 'app'
 const app = new Vue({
 	store,
 	minApi,
