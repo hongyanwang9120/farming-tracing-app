@@ -14,7 +14,7 @@
         </view>
         <view style="position: fixed; z-index: -1;">
             <map id="baseMap"
-               :style="{height:'650px', width:'750rpx', position: 'fixed','z-index':'1'}"
+               :style="{height:'calc(100% - 120px)', width:'750rpx', position: 'fixed','z-index':'1'}"
                :latitude="latitude"
                :longitude="longitude"
                scale="16" 
@@ -135,8 +135,9 @@
             bottom:0;
             width: 100%;
             height:236rpx;
-            background: rgba(0,0,0,.6);
-            color:#fff;
+            padding-bottom: 20rpx;
+            // background: rgba(0,0,0,.6);
+            // color:#fff;
             z-index: 99999999;
         }
     }

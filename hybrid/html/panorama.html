@@ -1,90 +1,110 @@
 <!DOCTYPE html>
 <html dir="ltr" mozdisallowselectionprint>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="google" content="notranslate">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
-    
-    <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
-    <style type="text/css">
-        html,body{
-            height:100%;
-            margin:0;
-            padding:0;
-        }
-        body{
-            background: rgba(0,0,0,.5);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
-  </head>
-
-    <body >
-        <div class="clsModal" style="flex:1" > </div>
-        <div id="viewer" style="height:60vh;"> </div>
-        <div class="clsModal" style="flex:1"> </div>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="google" content="notranslate">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>地块详情</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+        <style type="text/css">
+             html,body{
+                height:100%;
+                margin:0;
+                padding:0;
+                background:rgba(0,0,0,.5)
+            }
+            .time-box{
+                position:absolute;
+                left:18px;
+                top:18px;
+                color:#fff;
+                font-size:15px;
+            }
+            div,p,ul,li,img{  
+                margin:0;
+                padding:0;
+            }
+            ul{
+                position:absolute;
+                left:0;
+                right:0;
+                bottom:40px;
+                list-style:none;
+                display:flex;
+                flex-wrap:wrap;
+                background:rgba(61,61,61,.5);
+                padding: 20px 0 0 0;
+            }
+            ul li{
+                width:50%;
+                color:#fff;
+                padding-bottom:20px;
+                display:flex;
+                justify-content:center;
+            }
+            ul li p + p{
+                padding-top:3px;
+                font-size: 12px;
+            }
+            ul li img{
+                width:43px;
+                height:43px;
+                margin-right:12px;
+            }
+        </style>
+      </head>
+    <body>
+        <div class="time-box">
+            2020/09/25 15:15:36
+        </div>
+        <div id="viewer" style="height:100vh;"> </div>
+        <ul>
+           <li>
+               <img src="../../static/images/panorama_images/wKgBKF3LlMmAQ3cVAAAM7VcYeJY958.png">
+               <div>
+                   <p>空气温度</p>
+                   <p>32.74℃</p>
+               </div>      
+           </li>
+           <li>
+               <img src="../../static/images/panorama_images/wKgBKF3LlMmAWavfAAAOPshRT0s390.png">
+               <div>
+                   <p>空气湿度</p>
+                   <p>100.0RH%</p>
+               </div>      
+           </li>
+           <li>
+               <img src="../../static/images/panorama_images/wKgBn13LlNmAMfVFAAAM7VcYeJY489.png">
+               <div>
+                   <p>阳光强度</p>
+                   <p>27953.2lux</p>
+               </div>      
+           </li>
+           <li>
+              <img src="../../static/images/panorama_images/wKgBKF3LlMmABazJAAALyFZFBhs061.png">
+               <div>
+                   <p>大气压强</p>
+                   <p>997.1hPa</p>
+               </div>      
+           </li>
+        </ul>
     </body>
-    <script type="text/javascript">
-      var userAgent = navigator.userAgent;
-      if (userAgent.indexOf('AlipayClient') > -1) {
-        // 支付宝小程序的 JS-SDK 防止 404 需要动态加载，如果不需要兼容支付宝小程序，则无需引用此 JS 文件。
-        document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>');
-      } else if (/QQ/i.test(userAgent) && /miniProgram/i.test(userAgent)) {
-        // QQ 小程序
-        document.write('<script type="text/javascript" src="https://qqq.gtimg.cn/miniprogram/webview_jssdk/qqjssdk-1.0.0.js"><\/script>');
-      } else if (/miniProgram/i.test(userAgent) || /MicroMessenger/i.test(userAgent)) {
-        // 微信小程序 JS-SDK 如果不需要兼容微信小程序，则无需引用此 JS 文件。
-        document.write('<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"><\/script>');
-      } else if (/toutiaomicroapp/i.test(userAgent)) {
-        // 字节跳动小程序 JS-SDK 如果不需要兼容字节跳动小程序，则无需引用此 JS 文件。
-        document.write('<script type="text/javascript" src="https://s3.pstatp.com/toutiao/tmajssdk/jssdk-1.0.1.js"><\/script>');
-      } else if (/swan/i.test(userAgent)) {
-        // 百度小程序 JS-SDK 如果不需要兼容百度小程序，则无需引用此 JS 文件。
-        document.write('<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.18.js"><\/script>');
-      }
-      // if (!/toutiaomicroapp/i.test(userAgent)) {
-      //   document.querySelector('.post-message-section').style.visibility = 'visible';
-      // }
-    </script>
-    <!-- uni 的 SDK -->
-    <script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
-    <script type="text/javascript">
-        document.addEventListener('UniAppJSBridgeReady', function() {
-            console.log(34343)
-            document.querySelectorAll('.clsModal').forEach((item,key)=>{
-                item.addEventListener('click', function() {
-                    console.log(2323)
-                    //向uniapp传值
-                    uni.postMessage({
-                        data: {
-                            action: 'close'
-                        }
-                    });
-                    // uni.getEnv(function(res) {
-                    //     console.log('当前环境：' + JSON.stringify(res));
-                    // });
-                });
-            })
-        });
-        
+    <script>
         new PhotoSphereViewer.Viewer({
-           
-             container:document.querySelector('#viewer'),
-             panorama: '../../static/background.png',
-             autorotateDelay:true, //是否自旋转动
-             captureCursor:true,
-             autorotateSpeed:0.12943951023931953, // 旋转速度
-             size: {
+            container:document.querySelector('#viewer'),
+            panorama: '../../static/background.png',
+            autorotateDelay:true, //是否自旋转动
+            captureCursor:true,
+            autorotateSpeed:0.05943951023931953, // 旋转速度
+            size: {
                  width: '100%',
-                 height: '60vh'
-             },
-             caption: '一号地块',
+                 height: '100vh'
+            },
+            caption: '一号地块',
              // time_anim: false,
              // defaultLat: 1.4441088145446443,
              // defaultLong: 0.0800613513013615,
@@ -101,8 +121,7 @@
              navbar: [
                'autorotate',
                'zoom',
-               'caption',
-               'fullscreen' //全屏
+               'caption'
              ]
          }) 
     </script>

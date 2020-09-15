@@ -1,5 +1,25 @@
 {
 	"pages": [ 
+        {
+        	"path": "pages/base/base",
+        	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "地块一览",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical",
+        			"titleNView": {
+        				"buttons": [{
+        					"text": "\ue607",
+        					"fontSrc": "/static/iconfont.ttf",
+        					"fontSize": "20px",
+        					"color": "white"
+        				}]
+        			}
+        		}
+        	}
+        },
 		{
 			"path": "pages/index/index",
 			"style": {
@@ -24,7 +44,7 @@
 			"path": "pages/enterprise/enterprise",
 			"style": {
 							"navigationBarBackgroundColor": "#0081FF",
-							"navigationBarTitleText": "农产品区块链溯源平台",
+							"navigationBarTitleText": "企业排行榜",
 							"enablePullDownRefresh": true,
 							"onReachBottomDistance": 50,
 							"app-plus": {
@@ -41,7 +61,24 @@
 						}
 		},
 		{
-			"path": "pages/enterprise/detailsInfo"
+			"path": "pages/enterprise/detailsInfo",
+            "style": {
+                "navigationBarBackgroundColor": "#0081FF",
+                "navigationBarTitleText": "企业排行榜",
+                "enablePullDownRefresh": true,
+                "onReachBottomDistance": 50,
+                "app-plus": {
+                    "bounce": "vertical",
+                    "titleNView": {
+                        "buttons": [{
+                            "text": "\ue607",
+                            "fontSrc": "/static/iconfont.ttf",
+                            "fontSize": "20px",
+                            "color": "white"
+                        }]
+                    }
+                }
+            }
 		},
 		
 		{
@@ -53,28 +90,57 @@
         {
         	"path": "pages/base/base",
         	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
         		"navigationBarTitleText": "地块一览",
-                "app-plus": {
-                	"bounce": "none", // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-                    "titleNView": {
-
-                    }
-                }
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical",
+        			"titleNView": {
+        				"buttons": [{
+        					"text": "\ue607",
+        					"fontSrc": "/static/iconfont.ttf",
+        					"fontSize": "20px",
+        					"color": "white"
+        				}]
+        			}
+        		}
+        	}
+        },
+        {
+        	"path": "pages/base/basePanorama",
+        	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "地块详情",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical"
+        		}
         	}
         },
         {
         	"path": "pages/base/baseMap",
         	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
         		"navigationBarTitleText": "地块一览",
-                "app-plus": {
-                	"bounce": "none" // 取消iOS回弹,避免和下拉刷新冲突 (小程序无法取消, 点此查看H5端的取消方法... )
-                }
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical"
+        		}
         	}
         },
         {
         	"path": "pages/base/baseDetails",
         	"style": {
-        		"navigationBarTitleText": "地块详情"
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "地块详情",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical"
+        		}
         	}
         },
 		{
@@ -223,7 +289,7 @@
 		"selectedColor": "#4364F7",
 		"backgroundColor": "#ffffff",
 		"list": [{
-				"pagePath": "pages/index/index",
+				"pagePath": "pages/base/base",
 				"iconPath": "static/img/tabbar/todo.png",
 				"selectedIconPath": "static/img/tabbar/todoHL.png"
 			}, {

@@ -22,9 +22,7 @@
         <list-cnt title="实时影像">
             <videoList />
         </list-cnt>
-        <list-cnt title="全景展示">
-            全景展示 
-        </list-cnt>
+        <list-cnt title="全景展示" hidden @click.native="panoramaHandler" />
         <list-cnt title="环境监控">
             <environmentControl title="2号水EC传感器" :dataList="ringDataList1" />
             <environmentControl title="2号溶解氧传感器" :dataList="ringDataList2"/>
@@ -100,11 +98,14 @@
                 showModal:false,
                 ringDataList1:[],
                 ringDataList2:[],
-                ringDataList3:[]
+                ringDataList3:[],
+                showPanorama:null
 			};
 		},
         methods:{
-             
+            panoramaHandler(){
+                uni.navigateTo({ url: 'basePanorama' });
+            } 
         }
 	}
 </script>

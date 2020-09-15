@@ -8,14 +8,14 @@
 	        </view>
 		</view>
 	    <view class="cu-item-content" :style="contentSty">
-	        <slot type="string">  </slot>  
+	       <slot>  </slot>  
 	    </view>
 	</view> 
 </template>
 
 <script>
 	export default {
-        props:['title','open'],
+        props:['title','open','hidden'],
 		data() {
 			return {
 				isShow:false,
@@ -33,6 +33,8 @@
         },
         methods:{
             itemClick(){
+                if(this.hidden === '' || this.hidden) return;
+                console.log(33,this.hidden)
                 this.isShow = !this.isShow;
                 this.isShow 
                     ? this.contentSty = 'height:auto; padding: 32rpx;opacity: 1;' 

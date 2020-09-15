@@ -76,8 +76,10 @@
                 uni.navigateTo({
                     url: '../../pages/enterprise/enterprise'
                 });
+            },
+            detail(){
+                
             }
-
         }
     }
 </script>
