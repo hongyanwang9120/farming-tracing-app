@@ -14,19 +14,23 @@
 			setTabBarText() {
 				uni.setTabBarItem({
 					index: 0,
-					text: '首页'
+					text: '基地查看'
 				})
 				uni.setTabBarItem({
 					index: 1,
-					text: '办事'
+					text: '企业直播'
 				})
 				uni.setTabBarItem({
 					index: 2,
-					text: '发布'
+					text: '我的功能'
 				})
 				uni.setTabBarItem({
 					index: 3,
-					text: '企业应用'
+					text: '设备查看'
+				})
+				uni.setTabBarItem({
+					index: 4,
+					text: '企业排行'
 				})
 			},
 			/**

@@ -1,6 +1,7 @@
 <template>
     <!-- 企业排行榜 -->
     <view class="cu-list menu text-left bg-white">
+		<apphead></apphead>
         <view class="cu-item arrow" v-for="item in 20" :key="item">
             <view class="content flex" @click="linkTo">
                 <view class="cu-avatar lg radius margin" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view> 
@@ -14,7 +15,12 @@
 </template>
 
 <script>
+	import apphead from '@/pages/common/apphead'
 	export default {
+		components: {
+
+					apphead
+				},
         onLoad() {
             // uni.setNavigationBarColor({
             //     frontColor: '#ffffff',

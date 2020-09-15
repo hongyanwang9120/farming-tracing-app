@@ -17,7 +17,7 @@
 					<view class="tui-cell-input">
 						<tui-icon name="mobile" color="#6d7a87" :size="20"></tui-icon>
 
-						<input :adjust-position="false" :value="phoneData" placeholder="请输入手机号" placeholder-class="tui-phcolor" type="number"
+						<input :adjust-position="false" v-model="phoneData" placeholder="请输入手机号" placeholder-class="tui-phcolor" type="number"
 						 maxlength="11" @input="inputMobile" />
 						<view class="tui-icon-close" v-show="mobile" @tap="clearInput(1)">
 							<tui-icon name="close-fill" :size="16" color="#bfbfbf"></tui-icon>
@@ -28,7 +28,7 @@
 				<tui-list-cell :hover="false" :lineLeft="false" backgroundColor="transparent">
 					<view class="tui-cell-input">
 						<tui-icon name="pwd" color="#6d7a87" :size="20"></tui-icon>
-						<input :adjust-position="false" :value="passData" placeholder="请输入密码" :password="true" placeholder-class="tui-phcolor"
+						<input :adjust-position="false" v-model="passData" placeholder="请输入密码" :password="true" placeholder-class="tui-phcolor"
 						 type="text" maxlength="36" @input="inputPwd" />
 						<view class="tui-icon-close" v-show="password" @tap="clearInput(2)">
 							<tui-icon name="close-fill" :size="16" color="#bfbfbf"></tui-icon>
@@ -44,7 +44,7 @@
 				</view>
 			</view>
 			<view class="tui-btn-box">
-				<tui-button :disabledGray="true" :disabled="disabled" :shadow="true" shape="circle">登录</tui-button>
+				<tui-button :disabledGray="true" :disabled="disabled" :shadow="true" shape="circle"  @click.native="startLogin()">登录</tui-button>
 			</view>
 		</view>
 		<view class="tui-login-way" v-if="!popupShow">
@@ -127,6 +127,11 @@
 					uni.navigateTo({
 						url: '/pages/login/forgetPwd'
 					})
+				}else if(type==2){
+					
+					uni.reLaunch({
+						url: '/pages/index/index',
+					})
 				}else if(type==3){
 					uni.navigateTo({
 						url: '/pages/login/userTerms'
@@ -140,6 +145,7 @@
 			},
 			login(params) {
 				if (params) {
+					// 设置的登陆旋转效果 ,现在没有用到
 					this.isRotate = true
 					this.$store.dispatch('login', params).then(res => {
 						this.isRotate = false
@@ -158,6 +164,9 @@
 					//判断是否加载中，避免重复点击请求
 					return false;
 				}
+				debugger
+				console.log(this.phoneData,this.passData)
+			
 				if (this.phoneData.length == "") {
 					uni.showToast({
 						icon: 'none',
