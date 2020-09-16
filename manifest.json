@@ -18,7 +18,8 @@
         },
         /* 模块配置 */
         "modules" : {
-            "Push" : {}
+            "Push" : {},
+            "Maps" : {}
         },
         "compatible" : {
             "ignoreVersion" : true
@@ -82,6 +83,12 @@
                 "geolocation" : {
                     "amap" : {
                         "__platform__" : [ "ios", "android" ],
+                        "appkey_ios" : "",
+                        "appkey_android" : ""
+                    }
+                },
+                "maps" : {
+                    "amap" : {
                         "appkey_ios" : "",
                         "appkey_android" : ""
                     }

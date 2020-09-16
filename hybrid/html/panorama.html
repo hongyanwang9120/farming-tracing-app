@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html dir="ltr" mozdisallowselectionprint>
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="google" content="notranslate">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>地块详情</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/three/build/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uevent@2/browser.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/photo-sphere-viewer@4/dist/photo-sphere-viewer.min.js"></script>
+        <style type="text/css">
+             html,body{
+                height:100%;
+                margin:0;
+                padding:0;
+                background:rgba(0,0,0,.5)
+            }
+            .time-box{
+                position:absolute;
+                left:18px;
+                top:18px;
+                color:#fff;
+                font-size:15px;
+            }
+            div,p,ul,li,img{  
+                margin:0;
+                padding:0;
+            }
+            ul{
+                position:absolute;
+                left:0;
+                right:0;
+                bottom:40px;
+                list-style:none;
+                display:flex;
+                flex-wrap:wrap;
+                background:rgba(61,61,61,.5);
+                padding: 20px 0 0 0;
+            }
+            ul li{
+                width:50%;
+                color:#fff;
+                padding-bottom:20px;
+                display:flex;
+                justify-content:center;
+            }
+            ul li p + p{
+                padding-top:3px;
+                font-size: 12px;
+            }
+            ul li img{
+                width:43px;
+                height:43px;
+                margin-right:12px;
+            }
+        </style>
+      </head>
+    <body>
+        <div class="time-box">
+            2020/09/25 15:15:36
+        </div>
+        <div id="viewer" style="height:100vh;"> </div>
+        <ul>
+           <li>
+               <img src="../../static/images/panorama_images/wKgBKF3LlMmAQ3cVAAAM7VcYeJY958.png">
+               <div>
+                   <p>空气温度</p>
+                   <p>32.74℃</p>
+               </div>      
+           </li>
+           <li>
+               <img src="../../static/images/panorama_images/wKgBKF3LlMmAWavfAAAOPshRT0s390.png">
+               <div>
+                   <p>空气湿度</p>
+                   <p>100.0RH%</p>
+               </div>      
+           </li>
+           <li>
+               <img src="../../static/images/panorama_images/wKgBn13LlNmAMfVFAAAM7VcYeJY489.png">
+               <div>
+                   <p>阳光强度</p>
+                   <p>27953.2lux</p>
+               </div>      
+           </li>
+           <li>
+              <img src="../../static/images/panorama_images/wKgBKF3LlMmABazJAAALyFZFBhs061.png">
+               <div>
+                   <p>大气压强</p>
+                   <p>997.1hPa</p>
+               </div>      
+           </li>
+        </ul>
+    </body>
+    <script>
+        new PhotoSphereViewer.Viewer({
+            container:document.querySelector('#viewer'),
+            panorama: '../../static/background.png',
+            autorotateDelay:true, //是否自旋转动
+            captureCursor:true,
+            autorotateSpeed:0.05943951023931953, // 旋转速度
+            size: {
+                 width: '100%',
+                 height: '100vh'
+            },
+            caption: '一号地块',
+             // time_anim: false,
+             // defaultLat: 1.4441088145446443,
+             // defaultLong: 0.0800613513013615,
+             // sphereCorrection: {pan: 30.01, tilt: 0, roll: 0}, // 校正 低 倾斜 卷
+             maxFov: 100,         // 最大缩放值
+             minFov: 10,          // 最小缩放值
+             defaultZoomLvl: 20,     // 默认缩放值，在1-179之间
+             // mousewheel: false,    // 禁止鼠标滚轮缩放
+             touchmoveTwoFingers:false,
+             moveSpeed: 1, // 鼠标拖拽的速度
+             loadingImg: null,
+             loadingTxt: "place wait...",
+             navbar: false,
+             navbar: [
+               'autorotate',
+               'zoom',
+               'caption'
+             ]
+         }) 
+    </script>
+</html>
+

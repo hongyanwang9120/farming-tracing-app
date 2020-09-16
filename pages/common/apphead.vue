@@ -56,25 +56,24 @@
 					"格兰仕暗示拜访拼多多后遭天猫打压，拼多多高层赞其有勇气",
 					"阿里计划将每股普通股拆为8股，增加筹资灵活性"
 				],
-			}
-		},
-		computed: {
-			...mapGetters(['themeBgColor', 'darkMode'])
-		},
-		methods: {
-			linkTo() {
-				uni.navigateTo({
-					url: '../../pages/enterprise/enterprise'
-				});
-			},
-			handleClick() {
-				uni.navigateTo({
-									url: '../../pages/task/task'
-								});
-			}
 
-		}
-	}
+            }
+        },
+        computed: {
+            ...mapGetters(['themeBgColor', 'darkMode'])
+        },
+        methods: {
+            linkTo(){
+                uni.navigateTo({
+                    url: '../../pages/enterprise/enterprise'
+                });
+            },
+            detail(){
+                
+            }
+        }
+    }
+
 </script>
 
 <style lang="scss" scoped>

@@ -6,7 +6,7 @@
 			this.initSystem()
 			this.setTabBarText()
 			// 自动登录检测
-			this.autoLogin()
+			// this.autoLogin()
 			// 处理推送消息
 			this.handlePush()
 		},
