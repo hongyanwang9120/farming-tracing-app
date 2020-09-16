@@ -68,12 +68,15 @@
     import leftMenu from './components/leftMenu'
 	import apphead from '@/pages/common/apphead'
     export default {
+		onNavigationBarButtonTap(e) {
+				    console.log("success")        
+				},
         components: { uniNavBar, leftMenu, apphead},
         onReady() {
            
         },
         onLoad() {
-             
+		
         },
         onShow(e) {
              

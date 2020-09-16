@@ -2,7 +2,7 @@
 	<view>
 		
 	
-	<view v-for="item in card">
+	<view v-for="(item,index) in card" :key=index>
 		<tui-card  :image="item.img" :title="item.title" :tag="item.tag" :header="item.header">
 			<template v-slot:body>
 				<tui-list-cell>
@@ -19,7 +19,7 @@
 						</view>
 						<view class="tui-cell-bottom">
 							<tui-button class="tui-cell-btn" margin="20rpx 20rpx 26rpx 0" type="primary" shape="circle" width="100rpx"
-							 height="50rpx" :size="24" @click="detail">完成</tui-button>
+							 height="50rpx" :size="24"  @click="show">完成</tui-button>
 							<view class='note'>
 								<view>结束时间：</view>
 							</view>
@@ -40,7 +40,7 @@
 						</view>
 						<view class="tui-cell-bottom">
 							<tui-button class="tui-cell-btn" margin="20rpx 20rpx 26rpx 0" type="primary" shape="circle" width="100rpx"
-							 height="50rpx" :size="24" @click="detail">完成</tui-button>
+							 height="50rpx" :size="24"  @click="show">完成</tui-button>
 							<view class='note'>
 								<view>结束时间：</view>
 							</view>
@@ -50,8 +50,8 @@
 
 			</template>
 		</tui-card>
-		<tui-button margin="36rpx 0 0" type="white" shape="circle" @click="show">一般弹框</tui-button>
-		<tui-modal :show="modal" @click="handleClick" @cancel="hide" title="提示" content="确定退出登录吗？"></tui-modal>
+		
+		<tui-modal :show="modal" :button="button"  color="#333" @click="handleClick" @cancel="hide" title="提示" content="您确定已经完成任务？"></tui-modal>
 	</view>
 
 	</view>
@@ -61,6 +61,16 @@
 	export default {
 		data() {
 			return {
+				modal: false,
+				button: [
+								{
+									text: '取消',
+									type: 'gray'
+								},
+								{
+									text: '确定'
+								}
+							],
 				card: [{
 						img: {
 							url: "/static/img/task/inprogress@2x.png",
@@ -99,6 +109,18 @@
 			},
 			show() {
 				this.modal = true;
+			},
+			hide() {
+				this.modal = false;
+			},
+			handleClick(e) {
+				let index = e.index;
+				if (index === 0) {
+					this.tui.toast('你点击了取消按钮');
+				} else {
+					this.tui.toast('你点击了确定按钮');
+				}
+				this.hide();
 			},
 		}
 	}

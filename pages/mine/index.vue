@@ -27,6 +27,9 @@
 	import UchartsDemo from '@/pages/mine/ucharts-demo.vue'
 	import apphead from '@/pages/common/apphead'
 	export default {
+		onNavigationBarButtonTap(e) {
+				    console.log("success")        
+				},
 		components: {
 			ProjectTimeTable,
 			UchartsDemo,

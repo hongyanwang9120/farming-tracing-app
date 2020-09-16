@@ -25,6 +25,9 @@
 	import projectList from '@/pages/live/project-list.vue'
 	import apphead from '@/pages/common/apphead'
 	export default {
+		onNavigationBarButtonTap(e) {
+		    console.log("success")        
+		},
 		components: {
 			uniIcons,
 			uniNavBar,
@@ -67,6 +70,7 @@
 				this.searchVal = ''
 				this.search()
 			}
-		}
+		},
+		
 	}
 </script>

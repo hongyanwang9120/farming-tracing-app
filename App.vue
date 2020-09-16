@@ -145,4 +145,5 @@
 	@import "common/css/common.css";
 	@import "common/css/custom-dark.less";
 	@import "common/css/custom-light.less";
+	@import "static/iconfont/iconfont.css";
 </style>

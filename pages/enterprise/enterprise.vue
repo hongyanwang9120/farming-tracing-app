@@ -17,6 +17,9 @@
 <script>
 	import apphead from '@/pages/common/apphead'
 	export default {
+		onNavigationBarButtonTap(e) {
+				    console.log("success")        
+				},
 		components: {
 
 					apphead

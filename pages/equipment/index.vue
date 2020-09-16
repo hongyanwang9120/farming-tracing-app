@@ -63,6 +63,9 @@
 	import md5 from '@/common/lib/md5.min.js'
 	import apphead from '@/pages/common/apphead'
 	export default {
+		onNavigationBarButtonTap(e) {
+				    console.log("success")        
+				},
 		components: {
 			uniPopup,
 			apphead
@@ -70,6 +73,7 @@
 		computed: {
 			...mapGetters(['user', 'themeBgColor', 'darkMode'])
 		},
+		
 		data() {
 			return {
 				appInfo: {

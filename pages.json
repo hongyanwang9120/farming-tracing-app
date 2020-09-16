@@ -3,42 +3,13 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-				"navigationBarTitleText": "农产品区块链溯源平台",
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 50,
-				"app-plus": {
-					"bounce": "vertical",
-					"titleNView": {
-						"buttons": [{
-							"text": "\ue607",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize": "20px",
-							"color": "white"
-						}]
-					}
-				}
+			
 			}
 		},
 		// 企业排行
 		{
 			"path": "pages/enterprise/enterprise",
 			"style": {
-							"navigationBarBackgroundColor": "#0081FF",
-							"navigationBarTitleText": "农产品区块链溯源平台",
-							"enablePullDownRefresh": true,
-							"onReachBottomDistance": 50,
-							"app-plus": {
-								"bounce": "vertical",
-								"titleNView": {
-									"buttons": [{
-										"text": "\ue607",
-										"fontSrc": "/static/iconfont.ttf",
-										"fontSize": "20px",
-										"color": "white"
-									}]
-								}
-							}
 						}
 		},
 		{
@@ -63,13 +34,6 @@
 			"path": "pages/login/forgetPwd",
 
 			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-				"navigationBarTitleText": "找回密码",
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 50,
-				"app-plus": {
-					"bounce": "vertical"
-				}
 			}
 		},
 		// 重置密码
@@ -116,75 +80,41 @@
 				}
 			}
 		},
-		
-
-
 		// 企业直播
 		{
 			"path": "pages/live/index",
 			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-				"navigationBarTitleText": "农产品区块链溯源平台",
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 50,
-				"app-plus": {
-					"bounce": "vertical",
-					"titleNView": {
-						"buttons": [{
-							"text": "\ue607",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize": "20px",
-							"color": "white"
-						}]
-					}
-				}
 			}
 		},
 		{
 			"path": "pages/live/project-detail"
 		},
+		// 我的功能
 		{
 			"path": "pages/mine/index",
 			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-				"navigationBarTitleText": "农产品区块链溯源平台",
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 50,
-				"app-plus": {
-					"bounce": "vertical",
-					"titleNView": {
-						"buttons": [{
-							"text": "\ue607",
-							"fontSrc": "/static/iconfont.ttf",
-							"fontSize": "20px",
-							"color": "white"
-						}]
-					}
-				}
 			}
 		},
+		// 设备查看
 		{
 			"path": "pages/equipment/index",
 			"style": {
-							"navigationBarBackgroundColor": "#0081FF",
-							"navigationBarTitleText": "农产品区块链溯源平台",
-							"enablePullDownRefresh": true,
-							"onReachBottomDistance": 50,
-							"app-plus": {
-								"bounce": "vertical",
-								"titleNView": {
-									"buttons": [{
-										"text": "\ue607",
-										"fontSrc": "/static/iconfont.ttf",
-										"fontSize": "20px",
-										"color": "white"
-									}]
-								}
-							}
 						}
 		},
 		{
 			"path": "pages/equipment/setting"
+		},
+		{
+			"path": "pages/attestation/index",
+			"style": {}
+		},
+		{
+			"path": "pages/attestation/updata",
+			"style": {}
+		},
+		{
+			"path": "pages/attestation/join",
+			"style": {}
 		}
 	],
 	"easycom": {
@@ -224,6 +154,21 @@
 		]
 	},
 	"globalStyle": {
+		"navigationBarBackgroundColor": "#0081FF",
+		"navigationBarTitleText": "农产品区块链溯源平台",
+		"enablePullDownRefresh": true,
+		"onReachBottomDistance": 50,
+		"app-plus": {
+			"bounce": "vertical",
+			"titleNView": {
+				"buttons": [{
+					"text": "\ue607",
+					"fontSrc": "/static/iconfont/iconfont.ttf",
+					"fontSize": "20px",
+					"color": "white"
+				}]
+			}
+		}
 		// "navigationBarTextStyle": "white",
 		// "navigationBarTitleText": "uniapp-admin",
 		// "navigationBarBackgroundColor": "#4364F7",
