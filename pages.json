@@ -254,6 +254,102 @@
 				}
 			}
 		},
+        {
+			"path": "pages/mine/farmingRecords",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "农事记录",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "查看历史",
+							"fontSize": "14px",
+							"color": "white",
+                            "width":"70px"
+						}]
+					}
+				}
+			}
+		},
+        {
+			"path": "pages/mine/warehousing",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "入库",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "\ue607",
+							"fontSrc": "/static/iconfont.ttf",
+							"fontSize": "20px",
+							"color": "white"
+						}]
+					}
+				}
+			}
+		},
+        {
+        	"path": "pages/mine/stockList",
+        	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "库存管理",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical",
+        			"titleNView": {
+        				"buttons": [{
+        					"text": "查看历史",
+        					"fontSize": "28rpx",
+        					"color": "white",
+                            "width":"140rpx"
+        				}]
+        			}
+        		}
+        	}
+        },
+        {
+        	"path": "pages/mine/outputStock",
+        	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "产出物出库",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical"
+        		}
+        	}
+        },
+        {
+        	"path": "pages/mine/historyInfo",
+        	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "农事列表",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical"
+        		}
+        	}
+        },
+        {
+        	"path": "pages/mine/historyDetails",
+        	"style": {
+        		"navigationBarBackgroundColor": "#0081FF",
+        		"navigationBarTitleText": "农事记录详情",
+        		"enablePullDownRefresh": true,
+        		"onReachBottomDistance": 50,
+        		"app-plus": {
+        			"bounce": "vertical"
+        		}
+        	}
+        },
 		{
 			"path": "pages/equipment/index",
 			"style": {

@@ -1,8 +1,6 @@
 <template>
     <view>
-        
 		<apphead></apphead>
-        
         <view class="bg-white padding margin-top" :style="{height: winHeight + 'rpx'}">
             <view class="grid text-center col-4">
                 <view class="padding-sm">
