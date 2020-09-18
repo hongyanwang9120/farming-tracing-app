@@ -9,11 +9,13 @@
                     <picker @change="pickerChange" :value="baseName" :range="baseList">
                         <view class="picker">
                             <input type="text" class="text-sm padding-left-sm" disabled :value="baseName" />
+							
                             <icon type="" class="cuIcon-fold" />
                         </view>
                     </picker>
                 </view>
-                <text class="padding-left cuIcon-global" style="padding-top:10rpx;" @click="linkToMap" />
+				<span class="iconfont icon-ditu2 padding-left" style="padding-top:10rpx"  @tap="linkToMap"></span>
+                <!-- <text class="padding-left cuIcon-global" style="padding-top:10rpx;" @click="linkToMap" /> -->
             </view>
             <!-- 基地列表 -->
             <view class="grid text-center margin-top padding-tb-sm col-2">
@@ -92,5 +94,9 @@
             }
         }
     }
-    
+    .icon-ditu2{
+		font-size: 50rpx;
+		position: relative;
+		top:-20rpx;;
+	}
 </style>

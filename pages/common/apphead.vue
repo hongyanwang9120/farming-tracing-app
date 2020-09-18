@@ -70,7 +70,13 @@
             },
             detail(){
                 
-            }
+            },
+			handleClick(){
+				uni.navigateTo({
+				    url: '../../pages/task/task'
+				});
+			}
+			
         }
     }
 

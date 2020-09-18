@@ -174,7 +174,7 @@
 					this.$store.dispatch('login', params).then(res => {
 						this.isRotate = false
 						uni.reLaunch({
-							url: '/pages/index/index',
+							url: '/',
 						})
 					}).catch(() => {
 						this.isRotate = false

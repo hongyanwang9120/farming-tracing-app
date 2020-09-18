@@ -130,7 +130,7 @@
 				}else if(type==2){
 					
 					uni.reLaunch({
-						url: '/pages/index/index',
+						url: '/pages/base/base',
 					})
 				}else if(type==3){
 					uni.navigateTo({
@@ -150,7 +150,7 @@
 					this.$store.dispatch('login', params).then(res => {
 						this.isRotate = false
 						uni.reLaunch({
-							url: '/pages/index/index',
+							url: '/pages/base/base',
 						})
 					}).catch(() => {
 						this.isRotate = false

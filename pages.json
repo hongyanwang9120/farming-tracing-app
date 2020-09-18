@@ -3,21 +3,7 @@
         {
         	"path": "pages/base/base",
         	"style": {
-        		"navigationBarBackgroundColor": "#0081FF",
-        		"navigationBarTitleText": "地块一览",
-        		"enablePullDownRefresh": true,
-        		"onReachBottomDistance": 50,
-        		"app-plus": {
-        			"bounce": "vertical",
-        			"titleNView": {
-        				"buttons": [{
-        					"text": "\ue607",
-        					"fontSrc": "/static/iconfont.ttf",
-        					"fontSize": "20px",
-        					"color": "white"
-        				}]
-        			}
-        		}
+        
         	}
         },
 		{
@@ -116,6 +102,18 @@
         	}
         },
 		{
+			"path": "pages/task/task",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "地块详情",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical"
+				}
+			}
+		},
+		{
 			"path": "pages/login/loginPwd",
 			"style": {
 				"titleNView": false
@@ -161,17 +159,13 @@
 			"path": "pages/enterprise/detailsInfo"
 		},
 		{
-			"path": "pages/login/login",
-			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-
-				"navigationBarTitleText": "任务管理",
-				"enablePullDownRefresh": true,
-				"onReachBottomDistance": 50,
-				"app-plus": {
-					"bounce": "vertical"
-				}
-			}
+			"path": "pages/login/login"
+			
+		},
+		//任务管理
+		{
+			"path": "pages/task/task"
+			
 		},
 
 		// 企业直播

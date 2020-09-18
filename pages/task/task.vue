@@ -10,8 +10,8 @@
 						<view class='tui-cell-title'>test</view>
 						<hr>
 						<view class='tui-cell-content'>
-							<view>开始时间</view>
-							<view>结束时间</view>
+							<view>开始时间: <span>2020-07-21 00:00:00</span></view>
+							<view>结束时间:<span>2020-07-21 00:00:00</span></view>
 						</view>
 						<hr>
 						<view class='tui-cell-note'>
@@ -31,8 +31,8 @@
 						<view class='tui-cell-title'>test</view>
 						<hr>
 						<view class='tui-cell-content'>
-							<view>开始时间</view>
-							<view>结束时间</view>
+							<view>开始时间:<span>2020-07-21 00:00:00</span></view>
+							<view>结束时间:<span>2020-07-21 00:00:00</span></view>
 						</view>
 						<hr>
 						<view class='tui-cell-note'>
@@ -42,7 +42,7 @@
 							<tui-button class="tui-cell-btn" margin="20rpx 20rpx 26rpx 0" type="primary" shape="circle" width="100rpx"
 							 height="50rpx" :size="24"  @click="show">完成</tui-button>
 							<view class='note'>
-								<view>结束时间：</view>
+								<view>结束时间：<span>2020-07-21 00:00:00</span></view>
 							</view>
 						</view>
 					</view>
