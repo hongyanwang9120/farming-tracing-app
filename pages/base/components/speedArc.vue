@@ -12,7 +12,7 @@
 </template>
 
 <script>
-	import uCharts from '@/components/u-charts/u-charts.js';
+	import uCharts from '@/common/lib/u-charts.min.js';
 	let _self, canvaArea = null;
 	export default {
         props:['dataList'],
