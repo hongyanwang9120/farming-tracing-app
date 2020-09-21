@@ -162,11 +162,7 @@
 			"path": "pages/login/login"
 			
 		},
-		//任务管理
-		{
-			"path": "pages/task/task"
-			
-		},
+		
 
 		// 企业直播
 
@@ -204,6 +200,17 @@
 		{
 			"path": "pages/attestation/join",
 			"style": {}
+		},
+		// 通用 信息功能
+		{
+			"path": "pages/message/index",
+			"style": {
+			}
+		},
+		//任务管理
+		{
+			"path": "pages/task/task"
+			
 		}
 	],
 	"easycom": {

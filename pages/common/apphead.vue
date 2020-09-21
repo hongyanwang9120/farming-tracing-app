@@ -17,7 +17,7 @@
 		</view>
 
 		<view class="tui-rolling-news">
-			<tui-icon name="news-fill" :size='28' color='#5677fc'></tui-icon>
+			<tui-icon name="news-fill" :size='28' color='#5677fc' @tap="goMsg"></tui-icon>
 			<swiper vertical autoplay circular interval="3000" class="tui-swiper">
 				<swiper-item v-for="(item,index) in newsList" :key="index" class="tui-swiper-item">
 					<view class="tui-news-item" @tap='detail'>{{item}}</view>
@@ -63,6 +63,11 @@
             ...mapGetters(['themeBgColor', 'darkMode'])
         },
         methods: {
+			goMsg(){
+				uni.navigateTo({
+				    url: '../../pages/message/index'
+				});
+			},
             linkTo(){
                 uni.navigateTo({
                     url: '../../pages/enterprise/enterprise'

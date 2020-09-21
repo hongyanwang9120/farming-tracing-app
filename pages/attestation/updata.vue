@@ -144,7 +144,7 @@
 			
 				formSubmit: function(e) {
 					uni.navigateTo({
-						url: '../../pages/attestation/join'
+						url: './join'
 					});
 					return false;
 					//表单规则

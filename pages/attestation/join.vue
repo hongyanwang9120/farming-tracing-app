@@ -97,14 +97,14 @@
 		},
 		methods: {
 			detail() {
-				uni.navigateTo({
-					url: '../../pages/attestation/updata'
-				});
+				
 			},
 			join(){
-				uni.navigateTo({
-									url: '../../pages/task/task'
-								});
+			
+				uni.switchTab({
+					url: '../../pages/base/base',
+					
+				});
 				
 			},
 				tapItem: function(item) {
