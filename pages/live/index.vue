@@ -1,76 +1,77 @@
 <template>
-	<view>
-		<apphead></apphead>
-		<uni-nav-bar :fixed="true" color="#333333" :background-color="themeBgColor" :border="false">
-			<view class="input-view">
-				<uni-icons type="search" size="22" color="#666666" />
-				<input v-model="searchVal" confirm-type="search" class="input" type="text" placeholder="搜索项目" @confirm="search">
-				<uni-icons :color="'#999999'" v-if="searchVal!==''" class="icon-clear" type="clear" size="22" @click="clear" />
-			</view>
-		</uni-nav-bar>
-		<swiper :class="darkMode?'custom-dark':'custom-light'" class="tab-content" :style="{height:winHeight+'px'}">
-			<swiper-item>
-				<scroll-view scroll-y class="scoll-y">
-					<project-list ref="projectListRef"></project-list>
-				</scroll-view>
-			</swiper-item>
-		</swiper>
+	<view class="video-list-box">
+		<apphead />
+        <!-- 视频列表 -->
+        <view class="grid text-center col-2">
+            <view class="padding-sm video-item" v-for="item in 8" :key="item">
+                <view class="bg-black" @click="showVideo=true">
+                    <text class="cuIcon-videofill text-white" />
+                    <view>视频名称</view>
+                </view>
+            </view>
+        </view>
+        <view class="padding margin" />
+        <!-- 视频播放 -->
+        <view class="cu-modal" :class="showVideo?'show':''">
+            <view class="cu-dialog" >
+                <view class="video-play-box bg-gradual-green">
+                    <view class="cu-bar justify-end text-white">
+                        <view class="action" @tap="showVideo=false">
+                            <text class="cuIcon-close " />
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
 	</view>
 </template>
 
 <script>
-	import { mapGetters } from 'vuex'
-	import uniIcons from '@/components/uni-icons/uni-icons.vue'
-	import uniNavBar from '@/components/uni-nav-bar/uni-nav-bar.vue'
-	import projectList from '@/pages/live/project-list.vue'
 	import apphead from '@/pages/common/apphead'
 	export default {
-		onNavigationBarButtonTap(e) {
-		    console.log("success")        
-		},
-		components: {
-			uniIcons,
-			uniNavBar,
-			projectList,
-			apphead
-		},
-		computed: {
-			...mapGetters(['themeBgColor', 'darkMode']),
-		},
+		components: { apphead },
 		data() {
 			return {
-				searchVal: '',
-				// 窗口高度
-				winHeight: ""
+                showVideo:''
 			}
 		},
 		onReady() {
-			// uni.setNavigationBarTitle({
-			//     title: this.$t('企业直播')
-			// })
-			// this.setNavBarColor()
+
 		},
 		onShow() {
 		
 		},
 		onLoad() {
-			//  高度自适应
-			uni.getSystemInfo({
-				success: res => {
-					this.winHeight = res.windowHeight
-				}
-			})
+			
 		},
+        onNavigationBarButtonTap(e) {
+            console.log("success")        
+        },
 		methods: {
-		
-			search() {
-				this.$refs.projectListRef.queryByName(this.searchVal)
-			},
-			clear() {
-				this.searchVal = ''
-				this.search()
-			}
-		},
-		
+ 
+		}
 	}
 </script>
+<style lang="scss" scoped>
+    .video-list-box{
+        .video-item{
+            margin:0 0 20rpx ;
+            .bg-black{
+                height:200rpx;
+                padding-top:20rpx;
+                [class*="cuIcon-"] {
+                    font-size: 56rpx;
+                }
+            }
+        }
+        .video-item:nth-child(2n-1){
+           padding:0 10rpx 0 0;
+        }
+        .video-item:nth-child(2n){
+            padding:0 0 0 10rpx;
+        }
+    }
+    .video-play-box{
+        height:460rpx;
+    }
+</style>

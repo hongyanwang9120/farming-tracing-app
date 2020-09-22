@@ -36,7 +36,7 @@
     import inputList from './components/inputList'
     import outList from './components/outList'
 	export default {
-        components:{ inputNumber, inputList, outList },
+        components:{ inputNumber, inputList, outList }, 
 		data() {
 			return {
                 current: 0,
@@ -46,6 +46,11 @@
                 goodsObj:{}
 			}
 		},
+        onNavigationBarButtonTap(btn) {
+            uni.navigateTo({
+                url:'outInHistory'
+            })
+        },
 		methods: {
             // title 选择事件
             swiperChange(e){
@@ -55,11 +60,6 @@
             openInputHandle(item){
                 this.showModalNumber = true;
                 this.goodsObj = item;
-            },
-           
-            // picker 选项点击事件
-            pickerChange(e){
-              
             },
             // 底部按钮点击事件
 			bottomBtnClick(e){
