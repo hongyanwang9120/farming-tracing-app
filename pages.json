@@ -174,6 +174,12 @@
 		{
 			"path": "pages/live/project-detail"
 		},
+		// 溯源页面
+		{
+			"path": "pages/qrcode/index",
+			"style": {
+			}
+		},
 		// 我的功能
 		{
 			"path": "pages/mine/index",
@@ -307,6 +313,104 @@
 		{
 			"path": "pages/task/task"
 			
+		},
+		//个人信息
+		{
+			"path": "pages/user/cropper-default"
+			
+		},
+		// 个人信息头像
+		{
+			"path": "pages/user/index"
+			
+		},
+		// 个人信息：昵称
+		{
+			"path": "pages/user/nickname/index",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "修改昵称",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "保存",
+							"fontSize": "14px",
+							"color": "white",
+			                "width":"70px"
+						}]
+					}
+				}
+			}
+			
+		},
+		// 个人信息：手机号修改
+		{
+			"path": "pages/user/telephone/index",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "修改手机",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "保存",
+							"fontSize": "14px",
+							"color": "white",
+			                "width":"70px"
+						}]
+					}
+				}
+			}
+			
+		},
+		// 个人信息：密码修改
+		{
+			"path": "pages/user/password/index",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "修改密码",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "保存",
+							"fontSize": "14px",
+							"color": "white",
+			                "width":"70px"
+						}]
+					}
+				}
+			}
+			
+		},
+		// 个人信息：密码修改
+		{
+			"path": "pages/user/address/index",
+			"style": {
+				"navigationBarBackgroundColor": "#0081FF",
+				"navigationBarTitleText": "修改地址",
+				"enablePullDownRefresh": true,
+				"onReachBottomDistance": 50,
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": {
+						"buttons": [{
+							"text": "保存",
+							"fontSize": "14px",
+							"color": "white",
+			                "width":"70px"
+						}]
+					}
+				}
+			}
+			
 		}
 	],
 	"easycom": {
@@ -358,6 +462,7 @@
 					"fontSrc": "/static/iconfont/iconfont.ttf",
 					"fontSize": "20px",
 					"color": "white"
+					// "onclick":"clickQRButton"
 				}]
 			}
 		}
