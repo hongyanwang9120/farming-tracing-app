@@ -118,11 +118,7 @@
 			
 		},
 		{
-			"path": "pages/live/index",
-			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-				"navigationBarTitleText": "企业直播"
-			}
+			"path": "pages/live/index"
 		},
 		{
 			"path": "pages/live/player",

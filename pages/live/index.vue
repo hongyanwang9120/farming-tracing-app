@@ -1,4 +1,5 @@
 <template>
+    <!-- 企业直播 列表 -->
 	<view class="video-list-box">
 		<apphead />
         <!-- 视频列表 -->
