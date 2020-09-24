@@ -3,9 +3,9 @@
 	<view>
 
 		<view class="cu-list-box text-left flex">
-			<view class="cu-avatar lg radius margin" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view>
-			<view class="qy-name-box">
-				<view class="text-lg"> 王小五 </view>
+			<view @tap="goUser" class="cu-avatar lg radius margin" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big25002.jpg);"></view>
+			<view class="qy-name-box" @tap="goUser">
+				<view class="text-lg" > 王小五 </view>
 				<text> 北京技术股份有限公司 </text>
 			</view>
 			<view class="tui-flex-box" @tap="handleClick">
@@ -17,7 +17,7 @@
 		</view>
 
 		<view class="tui-rolling-news">
-			<tui-icon name="news-fill" :size='28' color='#5677fc'></tui-icon>
+			<tui-icon name="news-fill" :size='28' color='#5677fc' @tap="goMsg"></tui-icon>
 			<swiper vertical autoplay circular interval="3000" class="tui-swiper">
 				<swiper-item v-for="(item,index) in newsList" :key="index" class="tui-swiper-item">
 					<view class="tui-news-item" @tap='detail'>{{item}}</view>
@@ -63,6 +63,16 @@
             ...mapGetters(['themeBgColor', 'darkMode'])
         },
         methods: {
+			goUser(){
+				uni.navigateTo({
+				    url: '../../pages/user/index'
+				});
+			},
+			goMsg(){
+				uni.navigateTo({
+				    url: '../../pages/message/index'
+				});
+			},
             linkTo(){
                 uni.navigateTo({
                     url: '../../pages/enterprise/enterprise'

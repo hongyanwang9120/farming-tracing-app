@@ -18,7 +18,7 @@
 		methods: {
 			detail() {
 				uni.navigateTo({
-					url: '../../pages/attestation/updata'
+					url: './updata'
 				});
 			}
 		}

@@ -18,7 +18,7 @@
 						<view class="tui-cell-input">
 							<tui-icon name="shield" color="#6d7a87" :size="20"></tui-icon>
 							<input v-model="verCode" placeholder="请输入验证码" placeholder-class="tui-phcolor" type="text" maxlength="6" @input="inputCode" />
-							<view class="tui-btn-send" :class="{ 'tui-gray': isSend }" :hover-class="isSend ? '' : 'tui-opcity'"
+							<view class="tui-btn-send" :class="{ 'tui-gray': isSend }" :hover-class="isSend ? '' : 'tui-opcity'" ref="runCode"
 							 :hover-stay-time="150" @tap="getVerCode()">{{ btnSendText }}</view>
 						</view>
 					</tui-list-cell>
