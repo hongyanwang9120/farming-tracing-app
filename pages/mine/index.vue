@@ -36,7 +36,6 @@
 </template>
 
 <script>
-    import { mapGetters } from 'vuex'
 	import apphead from '@/pages/common/apphead'
     export default {
         components: { apphead },
@@ -46,16 +45,23 @@
         onLoad() {
              
         },
-        onShow(e) {
-             
+        onNavigationBarButtonTap(btn) {
+            let that = this;
+            uni.scanCode({
+                success: function (res) {
+                    // console.info(res)
+                    if(res.result){
+                        uni.navigateTo({
+                            url:'testWebView?url=' + that.scanCodeUrl
+                        })
+                    }
+                }
+            }); 
         },
         data() {
             return {
 
             }
-        },
-        computed: {
-            ...mapGetters(['themeBgColor', 'darkMode'])
         },
         methods: {
             linkTo(type){

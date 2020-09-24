@@ -39,9 +39,21 @@
         components:{ apphead },
         //当点击了右上角的  筛选后
         onNavigationBarButtonTap(btn) {
-            if(btn.text == '地图模式'){
-                console.log('切换地图模式') 
-            }
+            let that = this;
+            uni.scanCode({
+                success: function (res) {
+                    // console.info(res)
+                    if(res.result){
+                        that.scanCodeUrl = res.result;
+                        uni.showModal({
+                            title: '扫码内容',
+                            content: res.result,
+                            showCancel: false,
+                            confirmText: '我知道了'
+                        });
+                    }
+                }
+            }); 
         },
 		data() {
 			return {

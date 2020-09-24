@@ -2,8 +2,9 @@
     <!-- 扫码 -->
     <tui-modal :show="showModal" :custom="true">
         <view class="text-center text-bold">关联溯源码 - 扫码添加</view>
-        <view class="tui-modal-custom margin-top-sm">
-            扫码结果： {{scanCodeObj}}
+        <view class="tui-modal-custom margin-top-sm" 
+            style="word-break: break-all; white-space: normal;">
+            扫码结果： {{scanCodeUrl}}
         </view>
         <view class="flex margin-top">
             <tui-button type="gray" height="72rpx" :size="28" shape="circle" 
@@ -19,7 +20,7 @@
         props:['showModal','companySlt'],
         data() {
             return {
-                scanCodeObj:{name:'dd'}
+                scanCodeUrl:''
             };
         },
         watch:{
@@ -29,15 +30,18 @@
         },
         methods:{
             scanCodeHandle(){
+                let that = this;
                 uni.scanCode({
                     success: function (res) {
-                        console.info(res)
-                        this.scanCodeObj = JSON.stringify(res.result);
+                        // console.info(res)
+                        that.scanCodeUrl = res.result;
                     }
                 }); 
             },
             submitHandle(){
-                
+                uni.navigateTo({
+                    url:'testWebView?url=' + this.scanCodeUrl
+                })
             }
         }
     }
