@@ -50,6 +50,9 @@
         },
         methods:{
             searchHandler(){
+                uni.navigateTo({
+                    url:'testWebView'
+                })
                 this.tui.toast('可以搜索了');
             }
         }

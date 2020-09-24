@@ -4,7 +4,7 @@
         <!-- 视频列表 -->
         <view class="grid text-center col-2">
             <view class="padding-sm video-item" v-for="item in 8" :key="item">
-                <view class="bg-black" @click="showVideo=true">
+                <view class="bg-black" @click="linkTo">
                     <text class="cuIcon-videofill text-white" />
                     <view>视频名称</view>
                 </view>
@@ -38,17 +38,27 @@
 		onReady() {
 
 		},
-		onShow() {
-		
+		onNavigationBarButtonTap(btn) {
+		    let that = this;
+		    uni.scanCode({
+		        success: function (res) {
+		            // console.info(res)
+		            if(res.result){
+		                that.scanCodeUrl = res.result;
+		                uni.showToast({
+		                    title:'扫码信息为：' + res.result,
+		                    icon:false
+		                })
+		            }
+		        }
+		    }); 
 		},
-		onLoad() {
-			
-		},
-        onNavigationBarButtonTap(e) {
-            console.log("success")        
-        },
 		methods: {
- 
+            linkTo(){
+                uni.navigateTo({
+                    url:'player'
+                })
+            }
 		}
 	}
 </script>

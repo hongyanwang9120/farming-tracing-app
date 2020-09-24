@@ -17,23 +17,24 @@
 <script>
 	import apphead from '@/pages/common/apphead'
 	export default {
-		onNavigationBarButtonTap(e) {
-				    console.log("success")        
-				},
-		components: {
-
-					apphead
-				},
-        onLoad() {
-            // uni.setNavigationBarColor({
-            //     frontColor: '#ffffff',
-            //     backgroundColor: this.themeBgColor,
-            //     animation: {
-            //         duration: 400,
-            //         timingFunc: 'easeIn'
-            //     }
-            // })
-        },
+		//当点击了右上角的  筛选后
+		onNavigationBarButtonTap(btn) {
+		    let that = this;
+		    uni.scanCode({
+		        success: function (res) {
+		            // console.info(res)
+		            if(res.result){
+		                uni.showModal({
+		                    title: '扫码内容',
+		                    content: res.result,
+		                    showCancel: false,
+		                    confirmText: '我知道了'
+		                });
+		            }
+		        }
+		    }); 
+		},
+		components: { apphead },
 		data() {
 			return {
 				

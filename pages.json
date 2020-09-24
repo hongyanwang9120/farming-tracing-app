@@ -24,7 +24,8 @@
                 "navigationBarBackgroundColor": "#0081FF",
                 "navigationBarTitleText": "企业排行榜",
                 "app-plus": {
-                    "bounce": "vertical"
+                    "bounce": "vertical",
+                    "titleNView": { }
                 }
             }
 		},
@@ -36,19 +37,13 @@
 			}
 		},
         {
-        	"path": "pages/base/base",
-        	"style": {
-        		"navigationBarBackgroundColor": "#0081FF",
-        		"navigationBarTitleText": "地块一览"
-        	}
-        },
-        {
         	"path": "pages/base/basePanorama",
         	"style": {
         		"navigationBarBackgroundColor": "#0081FF",
         		"navigationBarTitleText": "地块详情",
         		"app-plus": {
-        			"bounce": "vertical"
+        			"bounce": "vertical",
+                    "titleNView": { }
         		}
         	}
         },
@@ -68,20 +63,11 @@
         		"navigationBarBackgroundColor": "#0081FF",
         		"navigationBarTitleText": "地块详情",
         		"app-plus": {
-        			"bounce": "vertical"
+        			"bounce": "vertical",
+                    "titleNView": { }
         		}
         	}
         },
-		{
-			"path": "pages/task/task",
-			"style": {
-				"navigationBarBackgroundColor": "#0081FF",
-				"navigationBarTitleText": "地块详情",
-				"app-plus": {
-					"bounce": "vertical"
-				}
-			}
-		},
 		{
 			"path": "pages/login/loginPwd",
 			"style": {
@@ -131,9 +117,6 @@
 			"path": "pages/login/login"
 			
 		},
-		
-
-		// 企业直播
 		{
 			"path": "pages/live/index",
 			"style": {
@@ -142,7 +125,15 @@
 			}
 		},
 		{
-			"path": "pages/live/player"
+			"path": "pages/live/player",
+            "style": {
+            	"navigationBarBackgroundColor": "#0081FF",
+            	"navigationBarTitleText": "企业直播",
+            	"app-plus": {
+            		"bounce": "vertical",
+                    "titleNView": { }
+            	}
+            }
 		},
 		// 溯源页面
 		{
@@ -150,13 +141,9 @@
 			"style": {
 			}
 		},
-		// 我的功能
 		{
-			"path": "pages/mine/index",
-			"style": {
-			}
+			"path": "pages/mine/index"
 		},
-		// 设备查看
         {
 			"path": "pages/mine/farmingRecords",
 			"style": {
@@ -185,7 +172,8 @@
         		"enablePullDownRefresh": true,
         		"onReachBottomDistance": 50,
         		"app-plus": {
-        			"bounce": "vertical"
+        			"bounce": "vertical",
+                    "titleNView": { }
         		}
         	}
         },
@@ -197,7 +185,8 @@
         		"enablePullDownRefresh": true,
         		"onReachBottomDistance": 50,
         		"app-plus": {
-        			"bounce": "vertical"
+        			"bounce": "vertical",
+                    "titleNView": { }
         		}
         	}
         },
@@ -249,7 +238,8 @@
         		"enablePullDownRefresh": true,
         		"onReachBottomDistance": 50,
         		"app-plus": {
-        			"bounce": "vertical"
+        			"bounce": "vertical",
+                    "titleNView": { }
         		}
         	}
         },
@@ -260,13 +250,7 @@
         		"navigationBarTitleText": "出入库历史",
         		"app-plus": {
         			"bounce": "none",
-                    "titleNView": {
-                    	"buttons": [{
-                    		"text": "",
-                    		"fontSize": "12px",
-                    		"color": "0081FF"
-                    	}]
-                    }
+                    "titleNView": { }
         		}
         	}
         },
@@ -277,13 +261,7 @@
         		"navigationBarTitleText": "入库详情",
         		"app-plus": {
         			"bounce": "none",
-                    "titleNView": {
-                    	"buttons": [{
-                    		"text": "",
-                    		"fontSize": "12px",
-                    		"color": "0081FF"
-                    	}]
-                    }
+                    "titleNView": { }
         		}
         	}
         },
@@ -294,13 +272,7 @@
         		"navigationBarTitleText": "出库详情",
         		"app-plus": {
         			"bounce": "none",
-                    "titleNView": {
-                    	"buttons": [{
-                    		"text": "",
-                    		"fontSize": "12px",
-                    		"color": "0081FF"
-                    	}]
-                    }
+                    "titleNView": { }
         		}
         	}
         },
@@ -329,20 +301,17 @@
         		"navigationBarTitleText": "新增销售记录",
         		"app-plus": {
         			"bounce": "none",
-                    "titleNView": {
-                    	"buttons": [{
-                    		"text": "",
-                    		"fontSize": "12rpx",
-                    		"color": "#0081FF"
-                    	}]
-                    }
+                    "titleNView": { }
         		}
         	}
+        },
+        {
+        	"path": "pages/sale/testWebView"
         },
 		{
 			"path": "pages/equipment/index",
 			"style": {
-						}
+			}
 		},
 		{
 			"path": "pages/equipment/setting"
